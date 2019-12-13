@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value= "Bryant" name="star" v-model="name"/>科比
+        <input type="radio" value="li" name="star"v-model="name"/>李沁
+        <input type="radio" value="yang" name="star"v-model="name"/>杨洋
+        <img v-else-if="name =='Bryant'"style="width:200px;height:150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575980073036&di=f5b75733d3ca5ef5f0f69632c79f9723&imgtype=0&src=http%3A%2F%2Ftc.sinaimg.cn%2Fmaxwidth.2048%2Ftc.service.weibo.com%2Fifanr_cdn_b0_upaiyun_com%2F3b63085ffb459bc81490022c87dfff16.jpg">
+        <img v-else-if="name =='Bryant'"style="width:200px;height:150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575978659913&di=63d2ab8f197785ef2d44c2b575a13572&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fb%2F57bc0046ca813.jpg%3Fdown">
+        <img v-else-style="name =='yang'"style="width:200px;height:150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575979929302&di=f726cd7d3eabe685ab755106c5fc8d37&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161207%2F9e74cf03b6864c2ea55841ef2271c8de_th.jpg">
+    </div>
+    <script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            show:'false',
+            name:""
+        }
+    });
+    </script>
+</body>
+</html>
