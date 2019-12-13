@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <guolele-v2>
+            <template v-solt:title>
+                {{article.title}}
+            </template>
+            <template v-solt:title>
+                    {{article.author}}
+                </template>
+                <template v-solt:title>
+                        {{article.publishDate}}
+                    </template>
+        </guolele-v2> 
+    </div>
+    <script>
+        Vue.component('guolele',{
+            template:'<div>'+
+            '<h1><slot name= "title"></slot></h1>'+
+            '<h1><slot name= "author"></slot></h2>'+
+            '<h1><slot name= "date"></slot></h3>'+
+            '<p><slot></slot></p>'+
+            '</div>'
+        });
+        var app = new Vue({
+            el:"#app",
+            data:{
+               article:[
+                   {
+                   title:"李白诗句1",
+                   author:"郭乐乐黄文鸿",
+                   publishDate:"2019-12-10",
+                   content:"黄河之水天上来，奔流到海不复回。",
+                   
+               },
+               {
+                   title:"李白诗句2",
+                   author:"黄文鸿",
+                   publishDate:"2019-12-10",
+                   content:"天生我才必有用，千金散尽还复来！",
+                   
+               },
+               {
+                   title:"李白诗句3",
+                   author:"黄文鸿",
+                   publishDate:"2019-12-10",
+                   content:"仰天大笑出门去，我辈岂是蓬蒿人！",
+                   
+               }                               
+               ]
+            }
+        })
+    </script>
+    <style>
+
+    </style>
+ 
+</body>
+</html>
